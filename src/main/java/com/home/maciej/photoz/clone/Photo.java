@@ -1,5 +1,4 @@
 package com.home.maciej.photoz.clone;
-
 import jakarta.validation.constraints.NotEmpty;
 
 public class Photo {
