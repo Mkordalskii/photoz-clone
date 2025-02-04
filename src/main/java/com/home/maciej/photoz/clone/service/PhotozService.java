@@ -1,5 +1,6 @@
-package com.home.maciej.photoz.clone;
+package com.home.maciej.photoz.clone.service;
 
+import com.home.maciej.photoz.clone.model.Photo;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
@@ -10,7 +11,7 @@ import java.util.UUID;
 //@Component
 @Service
 public class PhotozService {
-    private Map<String,Photo> db = new HashMap<>() {{
+    private Map<String, Photo> db = new HashMap<>() {{
         put("1", new Photo("1","hello.jpg"));
     }};
     public Collection<Photo> get()

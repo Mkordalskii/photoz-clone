@@ -1,5 +1,7 @@
-package com.home.maciej.photoz.clone;
+package com.home.maciej.photoz.clone.web;
 
+import com.home.maciej.photoz.clone.model.Photo;
+import com.home.maciej.photoz.clone.service.PhotozService;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
