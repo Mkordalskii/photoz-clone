@@ -23,22 +23,21 @@ public class PhotozController {
         return "Hello World";
     }
     @GetMapping("/photoz")
-    public Collection<Photo> get()
+    public Iterable<Photo> get()
     {
         return photozService.get();
     }
     @GetMapping("/photoz/{id}")
-    public Photo get(@PathVariable String id)
+    public Photo get(@PathVariable Integer id)
     {
         Photo photo = photozService.get(id);
         if (photo == null) throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         return photo;
     }
     @DeleteMapping("/photoz/{id}")
-    public void delete(@PathVariable String id)
+    public void delete(@PathVariable Integer id)
     {
-        Photo photo = photozService.remove(id);
-        if (photo == null) throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        photozService.remove(id);
     }
     @PostMapping("/photoz")
     public Photo create(@RequestPart("data") MultipartFile file) throws IOException
